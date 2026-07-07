@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antes de continuar... — Handify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --handify-blue: #6699F3;
+      --handify-green: #72CF92;
+      --handify-yellow: #FEC649;
+      --handify-black: #0F0F0F;
+      --handify-gray-dark: #2D2D2D;
+      --handify-off-white: #F5F5F0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      color: var(--handify-gray-dark);
+      background: var(--handify-off-white);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .brand-stripe { display: flex; height: 5px; width: 100%; }
+    .brand-stripe span { flex: 1; }
+    .brand-stripe span:nth-child(1) { background: var(--handify-blue); }
+    .brand-stripe span:nth-child(2) { background: var(--handify-green); }
+    .brand-stripe span:nth-child(3) { background: var(--handify-yellow); }
+
+    .wrap { max-width: 620px; margin: 0 auto; padding: 56px 24px 72px; }
+
+    .intro { text-align: center; margin-bottom: 40px; }
+    .intro__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--handify-blue); margin-bottom: 14px; }
+    .intro h1 { font-size: 28px; font-weight: 900; color: var(--handify-black); line-height: 1.3; margin-bottom: 20px; }
+    .intro p { font-size: 16px; color: #555; line-height: 1.7; max-width: 520px; margin: 0 auto 12px; }
+    .intro p:last-child { margin-bottom: 0; }
+
+    .kit-card {
+      background: #fff; border: 1px solid #e8e8e4; border-radius: 20px;
+      padding: 36px 30px; margin-bottom: 32px;
+    }
+    .kit-tag {
+      display: inline-block; background: var(--handify-off-white); color: var(--handify-gray-dark);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 14px;
+    }
+    .kit-title { font-size: 22px; font-weight: 800; color: var(--handify-black); line-height: 1.3; margin-bottom: 20px; }
+    .kit-img { width: 100%; border-radius: 14px; margin-bottom: 24px; }
+    .kit-highlight { font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 28px; }
+    .kit-highlight strong { color: var(--handify-black); }
+    .kit-subhead { font-size: 14px; font-weight: 700; color: var(--handify-gray-dark); margin-bottom: 18px; }
+
+    .benefit-list { display: grid; gap: 18px; margin-bottom: 28px; }
+    .benefit { display: flex; gap: 14px; align-items: flex-start; }
+    .benefit__icon {
+      width: 34px; height: 34px; border-radius: 50%; background: var(--handify-off-white);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px;
+    }
+    .benefit h3 { font-size: 15px; font-weight: 700; color: var(--handify-gray-dark); margin-bottom: 4px; }
+    .benefit p { font-size: 13.5px; color: #777; line-height: 1.55; }
+
+    .savings {
+      background: rgba(114,207,146,0.1); border-radius: 14px; padding: 24px; text-align: center;
+    }
+    .savings-label { font-size: 13px; font-weight: 700; color: #2eaf6a; margin-bottom: 10px; }
+    .savings-price { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 6px; }
+    .savings-price del { font-size: 16px; color: #999; }
+    .savings-price strong { font-size: 26px; font-weight: 900; color: var(--handify-black); }
+    .savings-installment { font-size: 14px; color: #666; font-weight: 600; }
+
+    .social-proof { text-align: center; margin-bottom: 36px; }
+    .social-proof__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #999; margin-bottom: 10px; }
+    .social-proof__stars { font-size: 20px; color: var(--handify-yellow); letter-spacing: 4px; margin-bottom: 14px; }
+    .social-proof__text { font-size: 15px; color: #555; line-height: 1.7; max-width: 480px; margin: 0 auto; }
+
+    .choice { text-align: center; }
+    .choice__label { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin-bottom: 16px; }
+    .btn-primary {
+      display: block; width: 100%;
+      background: var(--handify-green); color: var(--handify-black);
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px;
+      padding: 18px 24px; border-radius: 10px; text-align: center;
+      transition: all 0.2s ease-out; margin-bottom: 18px;
+    }
+    .btn-primary:hover { background: #5bbf7f; }
+    .choice__secondary { display: inline-block; font-size: 14px; color: #999; text-decoration: underline; text-underline-offset: 3px; }
+    .choice__secondary:hover { color: #666; }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 40px 18px 56px; }
+      .intro h1 { font-size: 23px; }
+      .kit-card { padding: 28px 20px; }
+      .savings-price { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="brand-stripe"><span></span><span></span><span></span></div>
+
+<main class="wrap">
+  <div class="intro">
+    <p class="intro__eyebrow">Antes de continuar...</p>
+    <h1>Você tem certeza de que deseja apenas o Workshop?</h1>
+    <p>O Workshop Buquê de Velas é perfeito para aprender a criar seus primeiros buquês.</p>
+    <p>Mas antes de finalizar sua escolha, quero te mostrar uma opção que a maioria das alunas prefere.</p>
+  </div>
+
+  <div class="kit-card">
+    <span class="kit-tag">Recomendado pela maioria das alunas</span>
+    <h2 class="kit-title">Kit Completo para Começar no Artesanato com Velas</h2>
+    <img src="Fotos/img9 Workshop Buque de Velas.webp" alt="Kit Completo para Começar no Artesanato com Velas" class="kit-img">
+
+    <p class="kit-highlight">Por apenas <strong>R$50 a mais</strong>, você não aprende apenas a fazer buquês. Você também recebe um curso completo para continuar produzindo velas e aprender como vendê-las.</p>
+
+    <p class="kit-subhead">Além do Workshop Buquê de Velas, você recebe:</p>
+
+    <div class="benefit-list">
+      <div class="benefit">
+        <div class="benefit__icon">🕯️</div>
+        <div>
+          <h3>Fábrica das Velas de Lembrancinha</h3>
+          <p>Aprenda a criar velas aromáticas em pote, rosas, margaridas, jasmim, ursinho, coelhinho, mensagem secreta e chá revelação.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__icon">📈</div>
+        <div>
+          <h3>Curso Vendas no Artesanato na Prática</h3>
+          <p>Aprenda como conseguir clientes e vender pelo WhatsApp, Instagram e Shopee.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__icon">📚</div>
+        <div>
+          <h3>Biblioteca de Receitas</h3>
+          <p>Novos modelos para continuar criando.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__icon">📘</div>
+        <div>
+          <h3>Guia para Resolver Imperfeições nas Velas</h3>
+          <p>Corrija os erros mais comuns sem desperdiçar material.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__icon">🏪</div>
+        <div>
+          <h3>Lista Premium de Fornecedores</h3>
+          <p>Fornecedores de ceras, essências, pavios e materiais utilizados pelas professoras.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="savings">
+      <div class="savings-label">Você economiza mais de R$140</div>
+      <div class="savings-price">
+        <del>De R$241</del>
+        <strong>Por apenas R$97</strong>
+      </div>
+      <div class="savings-installment">12x de R$9,94</div>
+    </div>
+  </div>
+
+  <div class="social-proof">
+    <p class="social-proof__eyebrow">O que a maioria escolhe?</p>
+    <div class="social-proof__stars">★★★★★</div>
+    <p class="social-proof__text">Mais de 80% das alunas escolhem o Kit Completo, porque ele permite continuar evoluindo depois do Workshop e oferece tudo o que é necessário para começar a vender.</p>
+  </div>
+
+  <div class="choice">
+    <p class="choice__label">Escolha uma opção</p>
+    <!-- TODO: trocar pelo link de checkout real do Kit Completo assim que estiver disponível -->
+    <a href="#checkout-kit-completo" class="btn-primary">SIM! Quero aproveitar o Kit Completo por R$97</a>
+    <a href="https://checkout.payt.com.br/3456c5db705cf614ee89ca8fdf6a4192" class="choice__secondary">Continuar apenas com o Workshop por R$47</a>
+  </div>
+</main>
+
+</body>
+</html>
