@@ -66,13 +66,18 @@
     .benefit p { font-size: 13.5px; color: #777; line-height: 1.55; }
 
     .savings {
-      background: rgba(114,207,146,0.1); border-radius: 14px; padding: 24px; text-align: center;
+      background: rgba(114,207,146,0.1); border-radius: 14px; padding: 28px 24px; text-align: center;
     }
-    .savings-label { font-size: 13px; font-weight: 700; color: #2eaf6a; margin-bottom: 10px; }
-    .savings-price { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 6px; }
-    .savings-price del { font-size: 16px; color: #999; }
-    .savings-price strong { font-size: 26px; font-weight: 900; color: var(--handify-black); }
-    .savings-installment { font-size: 14px; color: #666; font-weight: 600; }
+    .savings-label { font-size: 14px; font-weight: 700; color: #2eaf6a; margin-bottom: 12px; }
+    .savings-old { font-size: 15px; color: #999; text-decoration: line-through; margin-bottom: 8px; }
+    .savings-price { font-size: 46px; font-weight: 900; color: var(--handify-black); line-height: 1; margin-bottom: 10px; }
+    .savings-price small {
+      display: block; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #2eaf6a; margin-bottom: 6px;
+    }
+    .savings-note { font-size: 16px; font-weight: 600; color: #777; }
+    .savings-note strong { font-size: 24px; font-weight: 900; color: var(--handify-black); margin: 0 2px; }
+    .savings-note span { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #999; }
 
     .social-proof { text-align: center; margin-bottom: 36px; }
     .social-proof__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #999; margin-bottom: 10px; }
@@ -96,7 +101,7 @@
       .wrap { padding: 40px 18px 56px; }
       .intro h1 { font-size: 23px; }
       .kit-card { padding: 28px 20px; }
-      .savings-price { flex-direction: column; gap: 2px; }
+      .savings-price { font-size: 38px; }
     }
   </style>
 </head>
@@ -161,11 +166,9 @@
 
     <div class="savings">
       <div class="savings-label">Você economiza mais de R$110</div>
-      <div class="savings-price">
-        <del>De R$241</del>
-        <strong>Por apenas R$127</strong>
-      </div>
-      <div class="savings-installment">12x de R$13,13</div>
+      <div class="savings-old">De R$241</div>
+      <div class="savings-price"><small>12x de</small>R$13,13</div>
+      <div class="savings-note">ou <strong>R$127</strong> <span>à vista</span></div>
     </div>
   </div>
 
